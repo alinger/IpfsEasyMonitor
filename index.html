@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Required meta tags-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="theme-color" content="#2196f3">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- Your app title -->
+	<title>飞视</title>
+	<!-- Path to Framework7 Library Bundle CSS -->
+	<link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+	<!---->
+	<link rel="stylesheet" href="css/icons.css">
+	<!-- Path to your custom app styles-->
+	<link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+	<!-- App root element -->
+	<div id="app">
+		<!-- Status bar overlay for fullscreen mode-->
+		<div class="statusbar"></div>
+		<!-- panel -->
+
+		<div class="panel panel-left panel-cover panel-resizable" style="width: 50%;">
+			<div id="map-container"></div>
+			<div class="location-info-box"><input type="text" class="location-input" placeholder="点击地图获取坐标信息"><div class="button button-custom send-location-btn">发送</div></div>
+		</div>
+
+		<div class="panel panel-right panel-cover panel-resizable">
+			<div class="list" style="margin:0">
+				<ul class="waiting-list">
+				</ul>
+			</div>
+		</div>
+
+		<!-- Views/Tabs container -->
+		<div class="views tabs safe-areas">
+
+			<!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+			<div id="view-main" class="view view-main tab tab-active">
+
+
+			</div>
+
+		</div>
+	</div>
+	<template type="text/html" id="waitingTemplate">
+		<li target_id="{{pid}}" class="waiting-item">
+			<div class="item-content">
+				<div class="item-media"><i class="icon icon-f7">user</i></div>
+				<div class="item-inner">
+					<div class="item-title">{{name}}</div>
+					<div class="item-after"><span class="badge color-blue">接入</span></div>
+				</div>
+			</div>
+		</li>
+	</template>
+
+	<!-- <script src="./cordova.js"></script> -->
+	<!-- <script src="./cordova_plugins.js"></script> -->
+	<!-- Framework7 library -->
+	<script src="framework7/js/framework7.bundle.min.js"></script>
+	<!-- Path to your app js-->
+	<script type="text/javascript" src="js/routes.js"></script>
+	<script type="text/javascript" src="js/face.js"></script>
+	<!-- <script src="js/peerjs.min.js"></script> -->
+	<script src="js/RecordRTC.js"></script>
+	<!-- <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=W2FBZ-FYX66-Q27SH-ECPQB-DTHNS-PCFEM"></script> -->
+	<script src="https://webapi.amap.com/maps?v=1.4.15&key=6f2a2be6b345d1a636aa448bbe4ade19&plugin=AMap.Autocomplete"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="js/chat.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<!-- <script type="text/javascript" src="/dist/js/all.min.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "facee",
+  "main": "statics/index.html",
+  "nodejs": true,
+  "window": {
+    "title": "飞视",
+    "icon": "link.png",
+    "fullscreen": false,
+    "resizable": true,
+    "always_on_top": false,
+    "nodejs": true,
+    "frame": true,
+    "kiosk": false,
+    "kiosk_emulation": false,
+    "width": 1027,
+    "height": 768,
+    "min_width": 1024,
+    "min_height": 768,
+    "as_desktop": false,
+    "visible": true,
+    "show": true,
+    "position": "center",
+    "show_in_taskbar": true
+  },
+  "webkit": {
+    "page-cache": false,
+    "java": false,
+    "plugin": false
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-order": "^1.2.0",
+    "gulp-remove-use-strict": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}
